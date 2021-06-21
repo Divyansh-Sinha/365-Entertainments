@@ -152,6 +152,17 @@ h1,h2,h3{
           display: inline-block;
       }
   }
+  #myInput {
+   
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+  }
+
 
   
 
@@ -180,7 +191,7 @@ h1,h2,h3{
   }
   
   .card{
-    display: flex;
+    display: none;
     align-items: flex-end;
     width: 12vw;
     height: 20vh;
@@ -260,3 +271,8 @@ h1,h2,h3{
     font-weight: 600;
     font-size: 0.7em;
   }
+
+
+
+
+  

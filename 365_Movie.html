@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>3rd Exercise</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Stint+Ultra+Condensed&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,200&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style/365_movie.css">
+
+
+
+    
+    
+  </head>
+  <body>
+
+    <div id="container">
+      <div class="card">
+        <img src="./Images/Image1.jfif">
+        <div class="text">
+        <h2>Haider</h2>
+        <p>Indian crime tragedy film.</p>
+      </div>
+      </div>
+
+    </div>
+  </body>
+  <script >
+
+    data = [
+      {
+        head: 'Dream 2',
+        para: 'Thriller,Mystery & Comedy'
+      },
+      {
+        head: 'Batman',
+        para: 'A Marvel Comics superhero team.'
+      },
+      {
+        head: 'The Misfits',
+        para: ' Action, Adventure, Thriller'
+      }
+    ]
+
+
+    let container = document.getElementById('container');
+    let card = document.querySelector('.card');
+    
+    for(let i = 0 ; i < 2 ; i++)
+    {
+      var cln = card.cloneNode(card)
+      cln.className = "clone";
+      document.getElementById("container").appendChild(cln)
+      let h1 = document.querySelectorAll('.clone .text h2');
+      let p = document.querySelectorAll('.clone .text p');
+      h1[i].innerHTML = data[i].head;
+      p[i].innerHTML = data[i].para;
+      console.log(cln)
+      
+    }
+      
+      
+    
+
+  </script>
+</html>

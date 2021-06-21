@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 :root {
@@ -54,7 +55,7 @@ h1,h2,h3{
 }
 
 .logo{
-    padding: 0.2rem;
+    padding: 0.3rem;
     
     border-radius: 0.3rem;
     box-shadow: 0 0 5px 0 rgba(0,0,0,0.7);
@@ -82,9 +83,7 @@ h1,h2,h3{
     border-bottom: 3px solid peru;
 }
 
-.toggle{
-    display: none !important;
-}
+
 
 @media (max-width: 960px){
 
@@ -93,7 +92,7 @@ h1,h2,h3{
     }
 
     .links{
-        width: 20vw;
+        width: 0vw;
         height: 100%;
         position: absolute;
         display: flex;
@@ -101,16 +100,14 @@ h1,h2,h3{
         top: 3.8em;
         right: 0;
         background: khaki;
+        transition: width 0.3s ease-in-out;
     }
 
     .links a{
         text-align: center;
         position: relative;
         padding: 20px 10px;
-    }   
-    
-
-    
+    }      
     
 }
 
@@ -154,25 +151,70 @@ h1,h2,h3{
   }
 
   
+ /* Carousel */
+
+ .slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  height: 85vh;
+  margin: 0.5rem 0.5rem;
+}
+
+.mySlides {
+  display: none;  
+}
+
+.mySlides img{
+  position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
 
 
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
 
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
 
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*  */
 
 #container{
     display: flex;
@@ -259,4 +301,12 @@ h1,h2,h3{
   .clone p{
     font-weight: 600;
     font-size: 0.7em;
+  }
+
+
+  /* Category */
+
+  .category{
+    display: flex;
+    flex-direction: row;
   }
